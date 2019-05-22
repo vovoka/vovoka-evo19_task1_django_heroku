@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p><strong>Real URL:</strong> <a href="">{{ url.real_url }}</a></p> 
+  <p><strong>Generated link:</strong> {{ url.generated_link }}</p>
+  <p><strong>URL views:</strong> {{ url.url_views }}</p> 
+
+{% endblock %}

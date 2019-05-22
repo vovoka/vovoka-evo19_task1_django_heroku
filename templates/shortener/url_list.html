@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>URL List</h1>
+  {% if url_list %}
+  <div class="wrap">
+    <table style="width:10%">
+      <tr>
+        <th>Generated code</th>
+        <th>Visits</th> 
+    </tr>
+
+      {% for url in url_list %}
+        <tr>
+          <td><a href="{{ url.real_url }}">{{ url.generated_link }}</a></td> <td>({{url.url_views}})</td>
+        <tr>
+      {% endfor %}
+    
+    </table>
+  </div>
+  {% else %}
+    <p>There are no urls.</p>
+  {% endif %}
+{% endblock %}
